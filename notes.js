@@ -3,6 +3,7 @@ const chalk = require('chalk')
 
 const log = console.log;
 
+//Read Note
 const readNote = (title) => {
     const notes = loadNotes()
     const matchedNote = notes.find((note) => note.title === title)
@@ -16,6 +17,7 @@ const readNote = (title) => {
     }
 }
 
+//List Note
 const listNotes = () => {
     log(chalk.yellow.inverse('Your notes'))
     const notes = loadNotes()
@@ -24,6 +26,7 @@ const listNotes = () => {
     });
 }
 
+//Add Note
 const addNote = (title,body) => {
     const notes = loadNotes()
     //const duplicateNotes = notes.filter((note) => note.title === title )
@@ -42,6 +45,7 @@ const addNote = (title,body) => {
     }
 }
 
+//Remove Note
 const removeNotes = (title) =>{
     const notes = loadNotes()
     const finalNotes = notes.filter((note) => note.title !== title )
@@ -54,10 +58,12 @@ const removeNotes = (title) =>{
     }
 }
 
+//Saving The notes to JSON file
 const saveNotes = (notes) => {
     const dataJSON = JSON.stringify(notes)
     fs.writeFileSync('notes.json',dataJSON)
 }
+
 
 const loadNotes = () => {
     try{

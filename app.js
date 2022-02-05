@@ -1,4 +1,4 @@
-// const validator = require('validator')
+
 
 const chalk = require('chalk')
 const yargs = require('yargs')
@@ -7,7 +7,7 @@ const notes = require('./notes')
 
 yargs.version('1.0.0')
 
-//Creating add command
+//Add command
 
 yargs.command({
     command: 'add',
@@ -29,7 +29,7 @@ yargs.command({
     }
 })
 
-//Creating remove command
+//Remove Command
 
 yargs.command({
     command: 'remove',
@@ -46,7 +46,7 @@ yargs.command({
     }
 })
 
-//Creating list command
+//List Command
 yargs.command({
     command: 'list',
     describe: 'List available notes',
@@ -55,7 +55,7 @@ yargs.command({
     }
 })
 
-//Creating read command
+//Read Comman
 yargs.command({
     command: 'read',
     describe: 'Read a note',
