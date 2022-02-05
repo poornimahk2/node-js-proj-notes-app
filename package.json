@@ -1,0 +1,19 @@
+{
+  "name": "notes-app",
+  "version": "1.0.0",
+  "description": "Notes Application",
+  "main": "app.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.0.0",
+    "geolib": "^3.3.3",
+    "nodemon": "^2.0.15",
+    "validator": "^13.7.0",
+    "yargs": "^17.3.1"
+  }
+}
